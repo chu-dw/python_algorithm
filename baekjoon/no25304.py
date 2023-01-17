@@ -11,4 +11,4 @@ if total_check == int(total):
 else:
     print('No')
 
-#input 받을 때 int변환이 편할 듯 
+#input 받을 때 int변환이 편할 듯
