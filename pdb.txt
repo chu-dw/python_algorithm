@@ -1,0 +1,10 @@
+hello
+this is pdb file
+for python study
+author chu
+Author kim
+aUthor  jeong
+
+여기부터 본문
+34 34 14 52 35 75
+
