@@ -155,5 +155,43 @@ print(dups_output)
 
 
 
+def is_balanced(color: dict) -> bool:
+    sum = 0.0
+    for index in color:
+        sum = sum + color[index]
+    if sum == 1.0:
+        return_val = True
+    else:
+        return_val = False
+    return return_val
+
+input_bool = is_balanced({'R':0.3, 'G':0.5, "b":0.1})
+print(input_bool)
 
 
+square_vector1 = {0:1,2:5, 6:3}
+square_vector2 = {0:3, 2:1, 7:4}
+
+def sparse_add(s_v1: dict, s_v2: dict) -> dict:
+    sum_dic = s_v1.copy()
+    for i in s_v2:
+        if i in sum_dic:
+            sum_dic[i] = sum_dic[i] + s_v2[i]
+        else:
+            sum_dic[i] = s_v2[i]
+    return sum_dic
+
+output_add = sparse_add(square_vector1,square_vector2)
+print(output_add)
+
+def sparse_dot(s_v1: dict, s_v2: dict) -> dict:
+    dot_sum = s_v1.copy()
+    total = 0
+    for i in s_v2:
+        if i in dot_sum:
+            dot_sum[i] = dot_sum[i] * s_v2[i]
+            total = total + dot_sum[i]
+    return total
+
+output_dot = sparse_dot(square_vector1, square_vector2)
+print(output_dot)
