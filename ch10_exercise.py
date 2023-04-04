@@ -42,3 +42,4 @@ with open('test4(input).txt', 'r') as input:
     input_txt = input.readline()
     input_txt.split()
 print(input_txt[0:3])
+
