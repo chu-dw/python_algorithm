@@ -1,26 +1,23 @@
-MAX = 2**31 - 1
-N, K = map(int, input().split())
-ml_list = []
+N, K = map(int,input().split())
+mak = []
 for i in range(N):
-    ml_list.append(input())
+    val = int(input())
+    mak.append(val)
 
-print(ml_list)
 
-def check_loop(mid):
-    for i in ml_list:
-        i % K
-        if (int(i) - i%K) - mid < 0:
-            return 1
-        else:
-            return 0
+#print(mak)
+result = 0
 
-start, end = 0, MAX
+start, end = 0, (2**31)-1
 while start <= end:
-    mid = (start + end) // 2
-    chek = 0
-    check = check_loop(mid)
-    if check == 1:
-        end = mid - 1
-    elif check == 0:
+    mid = (start+end)//2
+    temp = 0
+    for m in mak:
+        temp += m//mid
+    if temp >= K:
+        result = mid
         start = mid + 1
-    print(mid)
+    else:
+        end = mid - 1
+
+print(result)

@@ -13,13 +13,14 @@ start, end = 0, 2000000000
 while(start<=end):
     mid = (start+end)//2
     height = cut(tree,mid)
-    print(height)
+    #print(height)
     if height >= M:
         start = mid + 1
-        print(mid)
+        #print(mid)
+        res = mid
     elif height < M:
         end = mid - 1
-        print(mid)
-        res = mid
+        #print(mid)
 
-print('result',res)
+
+print(res)
