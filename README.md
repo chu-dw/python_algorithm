@@ -1,1 +1,1 @@
-# python_study
+# python_algorithm
